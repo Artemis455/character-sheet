@@ -1,0 +1,23 @@
+body {
+  background-color: #fff4eb;
+}
+
+.character-sheet {
+  background-color: white;
+  border-radius: 15px;
+  max-width: 600px;
+  min-width: none;
+  width: 300px;
+  padding: 10px;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.post-title {
+  color: rgb(16, 16, 16);
+  margin-top: -5px;
+}
+
+section {
+  margin-left: 10px;
+}

@@ -1,0 +1,65 @@
+body {
+  /*background-color: #fff4eb;*/
+  background-color: #f7f9ea;
+}
+
+.header {
+  color: #bf1e62;
+  margin-top: -25px;
+  margin-left: 15px;
+  display: block;
+  margin-top: 20px;
+}
+
+.character-sheet {
+  background-color: #f9dade;
+  border-radius: 15px;
+  /*max-width: 600px;
+  min-width: none;*/
+  width: 95%;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+
+  /*margin: auto;*/
+}
+
+.estadisticas {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  width: 100%;
+  justify-content: space-between;
+}
+.estadisticas div {
+  margin: 10px;
+  background-color: #aa7f66;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  margin: 10px;
+  color: #443025;
+}
+
+p {
+  text-align: center;
+  font-weight: bold;
+  margin-top: -5px;
+}
+
+.estadisticas div:hover {
+  background-color: bisque;
+  transform: scale(1.1);
+  transition: background-color 0.3s ease;
+  transition: transform 0.5s ease;
+}
+
+.character-description {
+  color: rgb(122, 118, 118);
+  margin-top: -10px;
+  margin-bottom: 20px;
+}

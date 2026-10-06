@@ -1,0 +1,10 @@
+Extensiones
+- Live server
+- Prettier 
+
+Atajos
+Guardar - Ctrl + S
+Buscar - Ctrl + F
+BUscar archivo - Ctrl + P
+Comentar línea - Shift + Alt + A
+

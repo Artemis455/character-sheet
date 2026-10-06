@@ -1,0 +1,46 @@
+body {
+  text-align: center;
+}
+
+.pricing-container {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.pricing-card {
+  border: 2px solid black;
+  margin: 10px;
+  text-align: center;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 0 0 200px;
+}
+
+.pricing-card:hover {
+  transform: scale(1.1);
+  transition: transform 0.5s ease;
+}
+
+.basic-plan {
+  order: 1;
+}
+
+.pro-plan {
+  order: 2;
+}
+
+.premium-plan {
+  order: 3;
+}
+
+hr {
+  width: 50%;
+  margin-top: -10px;
+  border: 0;
+  border-top: 1px solid black;
+}
