@@ -1,0 +1,83 @@
+body {
+  background-color: bisque;
+}
+
+.muestrario {
+  padding-top: 20px;
+  margin: auto;
+  width: 500px;
+}
+
+.caja-pelaje {
+  padding: 80px 50px;
+  margin: auto;
+  width: 100px;
+}
+
+.nombre {
+  text-align: center;
+  font-weight: bold;
+  font-size: larger;
+  margin-top: 1px;
+}
+
+hr {
+  margin-bottom: 30px;
+}
+
+.negro {
+  background-color: black;
+}
+
+.calico {
+  background: white;
+  background-image:
+   /*Naranjas*/
+    radial-gradient(
+      circle at 25% 20%,
+      color-mix(in srgb, orange 60%, white 40%) 10%,
+      transparent 20%
+    ),
+    radial-gradient(
+      circle at 80% 70%,
+      color-mix(in srgb, orange 60%, white 40%) 20%,
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 20% 80%,
+      color-mix(in srgb, orange 60%, white 40%) 5%,
+      transparent 20%
+    ),
+    /*Negras*/ radial-gradient(circle at 80% 30%, black 2%, transparent 15%),
+    radial-gradient(circle at 40% 90%, black 10%, transparent 25%);
+}
+
+.siames {
+  background: color-mix(in srgb, burlywood 80%, white 20%);
+  background-image: linear-gradient(
+    #3d291e 0%,
+    transparent 25%,
+    transparent 75%,
+    #3d291e 100%
+  );
+}
+
+.atigrado {
+  background: color-mix(in srgb, rgb(76, 40, 9) 65%, white 35%);
+  background-image: repeating-linear-gradient(
+    rgb(76, 40, 9) 0%,
+    transparent 10%,
+    transparent 20%,
+    rgb(76, 40, 9) 30%
+  );
+}
+
+.naranjoso {
+  background-color: color-mix(in srgb, orange 60%, white 40%);
+  background-image: repeating-linear-gradient(
+    rgb(229, 133, 0) 0%,
+    transparent 10%,
+    transparent 20%,
+    rgb(229, 133, 0) 30%
+  );
+}
