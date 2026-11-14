@@ -1,48 +1,220 @@
+:root {
+  --main-color: purple;
+  --background-general: #fff4eb;
+  --background-divs: white;
+  --border-radius: 15px;
+  --single-border: 2px solid var(--main-color);
+  --outline: solid thin var(--main-color);
+  --outline-offset: -5px;
+  --main-font: "Nunito";
+}
+
+.single-border {
+  border: var(--single-border);
+  border-radius: var(--border-radius);
+}
+
+.double-border {
+  border: var(--single-border);
+  border-radius: var(--border-radius);
+  outline: var(--outline);
+  outline-offset: var(--outline-offset);
+}
+
 body {
-  background-color: #fff4eb;
+  background-color: var(--background-general);
 }
 
 .character-sheet {
-  background-color: white;
-  border-radius: 15px;
-  max-width: 600px;
-  min-width: none;
-  width: 500px;
+  background-color: gray;
+  border-radius: var(--border-radius);
+  max-width: 85%;
+  min-width: 600px;
+  width: 80%;
+  padding: 10px;
+  margin: auto;
+  margin-top: 25px;
+}
+
+/* #region First Div */
+.name-title {
+  background-color: var(--background-divs);
   padding: 10px;
   display: flex;
   flex-direction: row;
-  margin: auto;
-  margin-top: 50px;
-
-  /*margin: auto;*/
+  align-items: center;
 }
 
-.character-img {
-  border-radius: 15px;
-
-  /*display: grid;
-  place-items: left;*/
-}
-
-.post-content {
-  padding: 20px;
-
-  /*text-align: right;
+.izquierda {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   width: 50%;
-
-  display: grid;
-  place-items: right;*/
+}
+.character-img {
+  border: var(--single-border);
+  border-radius: 15px;
+  width: 60px;
+  height: 60px;
 }
 
-.post-title {
+.name-title-text {
+  margin-left: 18px;
+  /*margin-bottom: -20px;
+  margin-top: -10px;*/
+}
+.character-name {
   color: rgb(16, 16, 16);
-  margin-top: -5px;
+  margin-bottom: -8px;
+  text-shadow: 1px 1px 2px black;
 }
-.character-description {
+.character-type {
+  margin-top: 10px;
+  color: rgb(107, 106, 106);
+}
+
+/* #region Botones */
+.botones {
+  display: flex;
+  justify-content: flex-end;
+  width: 50%;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.link-github {
+  height: 25px;
+  font-size: 11px;
+  border-radius: 30px;
+  border: 1px dashed gray;
+  background-color: var(--background-divs);
+}
+
+.link-github > a {
+  text-decoration: none;
   color: rgb(90, 89, 89);
-  margin-top: -10px;
-  margin-bottom: 20px;
 }
+.modo-oscuro {
+  margin-right: 7px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  background-color: white;
+  color: var(--main-color);
+  font-weight: bold;
+  transition: background-color ease 0.3s;
+}
+
+.tirar-d20 {
+  margin-right: 5px;
+  margin-left: 5px;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  padding: 8px;
+  background-color: var(--main-color);
+  color: white;
+  font-weight: bold;
+}
+
+.modo-oscuro:hover {
+  color: white;
+  background-color: var(--main-color);
+  cursor: pointer;
+}
+
+.tirar-d20:hover {
+  cursor: pointer;
+}
+/*#endregion*/
+
+/* #endregion */
+
+.character-description {
+  background-color: var(--background-divs);
+  padding: 10px;
+  color: rgb(90, 89, 89);
+}
+
+/* #region Segunda Línea */
+
+.segunda-linea {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.segunda-linea > .single-border {
+  background-color: var(--background-divs);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+  width: 80px;
+  height: 115px;
+  margin-bottom: 5px;
+}
+
+.titulo-stats {
+  font-weight: bolder;
+  text-transform: uppercase;
+  font-size: smaller;
+  font-family: Roboto condensed;
+  font-size: 12px;
+}
+
+.modificador {
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 2px 8px;
+  margin: -8px -8px;
+  font-weight: bolder;
+  font-size: 25px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.estadistica-numero {
+  border: var(--single-border);
+  border-radius: 12px;
+  padding: 1px 8px;
+  font-weight: bold;
+}
+
+.numero-competencia {
+  margin: -10px 0px;
+  font-size: 25px;
+  font-weight: bolder;
+  font-family: Arial, Helvetica, sans-serif;
+}
+input[type="checkbox"] {
+  appearance: none;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  border-radius: 8px;
+  border: var(--single-border);
+  margin-bottom: -7px;
+}
+
+.competencia {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.puntos-de-vida {
+  background-color: var(--background-divs);
+  width: 280px;
+  height: 122px;
+  min-height: 122px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+/* #endregion */
 
 .read-more {
   background-color: rgb(16, 16, 16);
@@ -58,7 +230,7 @@ body {
   background-color: rgb(97, 97, 97);
 }
 
-a {
+.character-description > a {
   color: black;
 }
 

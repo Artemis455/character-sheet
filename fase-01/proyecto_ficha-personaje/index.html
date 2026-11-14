@@ -5,41 +5,119 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>D&D character sheet</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amarante&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Nabla&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&amp;family=Roboto+Condensed:wght@400;700&amp;family=Roboto:wght@400;500;700&amp;display=swap"
+    />
   </head>
 
   <body>
     <div class="character-sheet">
-      <img
-        class="character-img"
-        alt="woman surrounded by water and otters"
-        src="./Images/furina.jpg"
-        width="200"
-      />
-      <div class="post-content">
-        <h2 class="post-title">Furina, the Hydro Archon</h2>
-        <p class="character-description">
-          Antes cuando era un solo ser,
-          <a
-            href="https://genshin-impact.fandom.com/es/wiki/Furina"
-            target="_blank"
-            ><strong>Foçalors</strong></a
-          >, la Diosa de la Justicia, separó su divinidad de su cuerpo y
-          espíritu, dejando atrás su yo humano, Furina. Después de la ejecución
-          de Foçalors y la destrucción del Trono Divino del Arconte Hydro,
-          Furina dejo su papel y ahora vive su vida como una humana común y
-          corriente.
-        </p>
-
-        <h3>Visión:</h3>
-        <div class="hydro">
+      <div class="name-title single-border">
+        <div class="izquierda">
           <img
-            class="hydro-image"
-            src="./Images/Hydro.webp"
-            alt="Hydro icon"
-            width="30px"
+            class="character-img"
+            alt="woman surrounded by water and otters"
+            src="./Images/furina-icon1.png"
           />
-          <p class="vision-name">Hydro</p>
+          <div class="name-title-text">
+            <h2 class="character-name">Furina, the Hydro Archon</h2>
+            <p class="character-type">Humana · Maga (Evocación) · Nivel 3</p>
+          </div>
         </div>
+        <div class="botones">
+          <button class="modo-oscuro" enabled>Modo Oscuro</button>
+          <button class="link-github">
+            <a href="https://github.com/Igglybuff/awesome-piracy#gaming"
+              >random.github/ficha</a
+            >
+          </button>
+          <button class="tirar-d20">Tirar D20</button>
+        </div>
+      </div>
+
+      <p class="character-description double-border">
+        Antes cuando era un solo ser,
+        <a
+          href="https://genshin-impact.fandom.com/es/wiki/Furina"
+          target="_blank"
+          ><strong>Foçalors</strong></a
+        >, la Diosa de la Justicia, separó su divinidad de su cuerpo y espíritu,
+        dejando atrás su yo humano, Furina. Después de la ejecución de Foçalors
+        y la destrucción del Trono Divino del Arconte Hydro, Furina dejo su
+        papel y ahora vive su vida como una humana común y corriente.
+      </p>
+
+      <div class="segunda-linea">
+        <div class="fuerza estadisticas single-border">
+          <p class="titulo-stats">Fuerza</p>
+          <p class="modificador">+2</p>
+          <p class="estadistica-numero">15</p>
+        </div>
+
+        <div class="destreza estadisticas single-border">
+          <p class="titulo-stats">Destreza</p>
+          <p class="modificador">+1</p>
+          <p class="estadistica-numero">12</p>
+        </div>
+
+        <div class="constitucion estadisticas single-border">
+          <p class="titulo-stats">Constitución</p>
+          <p class="modificador">+1</p>
+          <p class="estadistica-numero">13</p>
+        </div>
+
+        <div class="inteligencia estadisticas single-border">
+          <p class="titulo-stats">Inteligencia</p>
+          <p class="modificador">-1</p>
+          <p class="estadistica-numero">9</p>
+        </div>
+
+        <div class="sabiduria estadisticas single-border">
+          <p class="titulo-stats">Sabiduria</p>
+          <p class="modificador">+0</p>
+          <p class="estadistica-numero">10</p>
+        </div>
+
+        <div class="carisma estadisticas single-border">
+          <p class="titulo-stats">Carisma</p>
+          <p class="modificador">+3</p>
+          <p class="estadistica-numero">16</p>
+        </div>
+
+        <div class="competencia bonificador single-border">
+          <p class="titulo-stats">Competencia</p>
+          <p class="numero-competencia">+2</p>
+          <p class="titulo-stats">BONIFICADOR</p>
+        </div>
+        <div class="competencia velocidad single-border">
+          <p class="titulo-stats">Caminando</p>
+          <p class="numero-competencia">30</p>
+          <p class="titulo-stats">Pies</p>
+        </div>
+        <div class="competencia inspiración single-border">
+          <input class="checkbox" type="checkbox" />
+          <p class="titulo-stats">Inpiración heróica</p>
+        </div>
+
+        <div class="puntos-de-vida double-border">PUNTOS DE VIDA</div>
+      </div>
+
+      <h3>Visión:</h3>
+      <div class="hydro">
+        <img
+          class="hydro-image"
+          src="./Images/Hydro.webp"
+          alt="Hydro icon"
+          width="30px"
+        />
+        <p class="vision-name">Hydro</p>
 
         <!--<a
           class="read-more"
