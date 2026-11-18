@@ -1,0 +1,273 @@
+:root {
+  --main-color: #895129;
+  /*--background-general: #fff4eb;*/
+  --background-general: antiquewhite;
+  --background-second: #dda15e;
+  --background-divs: color-mix(in srgb, #dda15e 35%, white 65%);
+  --border-radius: 15px;
+  --single-border: 3px solid var(--main-color);
+  --outline: solid thin var(--main-color);
+  --outline-offset: -5px;
+  --main-font: "Nunito";
+}
+
+.single-border {
+  border: var(--single-border);
+  border-radius: var(--border-radius);
+}
+
+.double-border {
+  border: var(--single-border);
+  border-radius: var(--border-radius);
+  outline: var(--outline);
+  outline-offset: var(--outline-offset);
+}
+
+body {
+  background-color: var(--background-general);
+}
+
+.character-sheet {
+  border-radius: var(--border-radius);
+  max-width: 85%;
+  min-width: 600px;
+  width: 80%;
+  padding: 10px;
+  margin: auto;
+  margin-top: 25px;
+}
+
+/* #region First Div */
+.name-title {
+  background-color: var(--background-divs);
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: sticky;
+  top: 0;
+}
+
+.izquierda {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 50%;
+  position: relative;
+}
+
+.nivel {
+  background-color: var(--main-color);
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 42px;
+  left: 45px;
+  z-index: 10;
+  border-radius: 20px;
+  padding: 4px;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+}
+
+.profile {
+  width: 60px;
+  max-width: 60px;
+  display: flex;
+  position: relative;
+}
+.character-img {
+  border: var(--single-border);
+  border-radius: 15px;
+  width: 60px;
+  height: 60px;
+}
+
+.name-title-text {
+  margin-left: 18px;
+  /*margin-bottom: -20px;
+  margin-top: -10px;*/
+}
+.character-name {
+  color: rgb(16, 16, 16);
+  margin-bottom: -8px;
+  text-shadow: 1px 1px 2px black;
+}
+.character-type {
+  margin-top: 10px;
+  color: rgb(107, 106, 106);
+}
+
+/* #region Botones */
+.botones {
+  display: flex;
+  justify-content: flex-end;
+  width: 50%;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.link-github {
+  height: 25px;
+  font-size: 11px;
+  border-radius: 30px;
+  border: 1px dashed gray;
+  background-color: var(--background-divs);
+}
+
+.link-github > a {
+  text-decoration: none;
+  color: rgb(90, 89, 89);
+}
+.modo-oscuro {
+  margin-right: 7px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  background-color: var(--background-divs);
+  color: var(--main-color);
+  font-weight: bold;
+  transition: background-color ease 0.3s;
+}
+
+.tirar-d20 {
+  margin-right: 5px;
+  margin-left: 5px;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  padding: 8px;
+  background-color: var(--main-color);
+  color: white;
+  font-weight: bold;
+}
+
+.modo-oscuro:hover {
+  color: white;
+  background-color: var(--main-color);
+  cursor: pointer;
+}
+
+.tirar-d20:hover {
+  cursor: pointer;
+}
+/*#endregion*/
+
+/* #endregion */
+
+.character-description {
+  background-color: var(--background-divs);
+  padding: 10px;
+  color: rgb(90, 89, 89);
+}
+
+/* #region Segunda Línea */
+
+.segunda-linea {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.segunda-linea > .single-border {
+  background-color: var(--background-divs);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+  width: 80px;
+  height: 115px;
+  margin-bottom: 5px;
+}
+
+.titulo-stats {
+  font-weight: bolder;
+  text-transform: uppercase;
+  font-size: smaller;
+  font-family: Roboto condensed;
+  font-size: 12px;
+}
+
+.modificador {
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 2px 8px;
+  margin: -8px -8px;
+  font-weight: bolder;
+  font-size: 25px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.estadistica-numero {
+  border: var(--single-border);
+  border-radius: 12px;
+  padding: 1px 8px;
+  font-weight: bold;
+}
+
+.numero-competencia {
+  margin: -10px 0px;
+  font-size: 25px;
+  font-weight: bolder;
+  font-family: Arial, Helvetica, sans-serif;
+}
+input[type="checkbox"] {
+  appearance: none;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  border-radius: 8px;
+  border: var(--single-border);
+  margin-bottom: -7px;
+}
+
+.competencia {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.puntos-de-vida {
+  background-color: var(--background-divs);
+  width: 280px;
+  height: 122px;
+  min-height: 122px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+/* #endregion */
+
+.read-more {
+  background-color: rgb(16, 16, 16);
+  color: white;
+  padding: 8px;
+  border-radius: 5px;
+  margin: -5px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.read-more:hover {
+  background-color: rgb(97, 97, 97);
+}
+
+.character-description > a {
+  color: black;
+}
+
+a:hover {
+  color: cornflowerblue;
+}
+
+.hydro {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  margin-top: -20px;
+}
