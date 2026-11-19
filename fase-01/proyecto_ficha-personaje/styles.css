@@ -7,6 +7,10 @@
   --outline: solid thin var(--main-color);
   --outline-offset: -5px;
   --main-font: "Nunito";
+
+  /*puntos de vida*/
+  --cantidad-vida: 10;
+  --cantidad-vida-px: calc(var(--cantidad-vida) * 10px);
 }
 
 .single-border {
@@ -23,6 +27,7 @@
 
 body {
   background-color: var(--background-general);
+  font-family: Roboto condensed;
 }
 
 .character-sheet {
@@ -43,7 +48,7 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  position: sticky;
+  /*position: sticky;*/
   top: 0;
 }
 
@@ -142,7 +147,7 @@ body {
 }
 
 .modo-oscuro:hover {
-  color: white;
+  color: var(--background-divs);
   background-color: var(--main-color);
   cursor: pointer;
 }
@@ -227,6 +232,8 @@ input[type="checkbox"] {
   justify-content: center;
 }
 
+/* #region Puntos de vida */
+
 .puntos-de-vida {
   background-color: var(--background-divs);
   width: 280px;
@@ -235,9 +242,118 @@ input[type="checkbox"] {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: bolder;
-  font-size: 20px;
+  flex-direction: column;
+  padding-top: 8px;
 }
+
+.botones-y-numeros {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 8px 0px -6px 0px;
+  width: 90%;
+}
+
+.botones-vida {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  width: 65px;
+}
+
+.boton-sanar {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  background-color: var(--background-divs);
+  color: var(--main-color);
+  font: bold 12px Roboto condensed;
+  transition: background-color ease 0.3s;
+}
+
+.boton-daño {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  background-color: var(--background-divs);
+  color: var(--main-color);
+  font: bold 12px Roboto condensed;
+  transition: background-color ease 0.3s;
+  font-size: 12px;
+}
+
+.boton-sanar:hover {
+  color: var(--background-divs);
+  background-color: var(--main-color);
+  cursor: pointer;
+}
+
+.boton-daño:hover {
+  color: var(--background-divs);
+  background-color: var(--main-color);
+  cursor: pointer;
+}
+
+.contenedor-puntos-vida {
+  margin-left: 10px;
+  width: 200px;
+}
+.numeros-vida {
+  counter-reset: vida-texto var(--cantidad-vida);
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  word-spacing: 15px;
+}
+
+.numeros-vida::after {
+  content: counter(vida-texto) "  /  12  —";
+}
+
+.letra {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 12px;
+  color: rgb(126, 125, 125);
+}
+.letras-vida {
+  display: flex;
+  gap: 25px;
+  padding-left: 10px;
+}
+
+.puntos-y-barra {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  padding-top: 15px;
+  padding-bottom: -10;
+}
+
+.barra-vida-abajo {
+  position: relative;
+  background-color: rgb(226, 224, 224);
+  border-radius: 10px;
+  padding: 6px 120px;
+  border: 1px solid rgb(199, 195, 195);
+}
+
+.barra-vida-arriba {
+  position: absolute;
+  border-radius: 10px;
+  padding: 6px var(--cantidad-vida-px);
+  left: 0;
+  top: 0;
+  background-color: var(--main-color);
+}
+
+.titulo-vida {
+  font-weight: bolder;
+  font-size: 12px;
+}
+
+/* #endregion */
 
 /* #endregion */
 
