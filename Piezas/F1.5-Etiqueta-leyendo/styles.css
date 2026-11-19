@@ -13,6 +13,7 @@ body {
   position: relative;
   align-items: center;
   justify-content: space-between;
+  z-index: 1;
 }
 
 .leyendo {
@@ -23,6 +24,7 @@ body {
   font: bold 20px serif;
   right: -10px;
   top: -20px;
+  z-index: 5;
 }
 
 .titulo {
